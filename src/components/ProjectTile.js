@@ -1,7 +1,7 @@
 import {DiHtml5, DiJsBadge, DiCss3} from 'react-icons/di'
 import {SiTypescript} from 'react-icons/si'
 import fixDate from '../utils/fixDate'
-import './ProjectTile.scss'
+import './ProjectTile.css'
 
 const ProjectTile = ({url, name, description, language, lastUpdate}) => {
     const getIcon = lang => {
