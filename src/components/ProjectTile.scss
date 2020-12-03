@@ -1,0 +1,66 @@
+.project {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 400px;
+    height: 130px;
+    justify-self: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    strong {
+        font-size: 18px;
+    }
+
+    a {
+        font-size: 14px;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .lang-updated {
+        display: flex;
+        justify-content: space-between;
+    
+    .updated-at {
+        font-size: 12px;
+        }
+    }
+}
+
+.lang-HTML {
+    border-bottom: 2px solid #e34f26;
+
+    .language {
+        color: #e34f26;
+    }
+}
+
+.lang-JavaScript {
+    border-bottom: 2px solid #f7df1e;
+
+    .language {
+        color: #f7df1e;
+    }
+}
+
+.lang-TypeScript {
+    border-bottom: 2px solid #3178c6;
+
+    .language {
+        color: #3178c6;
+    }
+}
+
+.lang-CSS {
+    border-bottom: 2px solid #264de4;
+
+    .language {
+        color: #264de4;
+    }
+}

@@ -1,38 +1,162 @@
 .App {
+  height: inherit;
+}
+
+aside {
+  background-color: #000;
+  color: #fff;
+	position: fixed;
+	height: 100%;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+aside img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+aside > div {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+aside > div p:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+aside > div p:nth-child(2) {
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+aside > div p:nth-child(3) {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+aside a {
+  font-size: 30px;
+  color: inherit;
+}
+
+aside a:hover {
+  opacity: .75;
+}
+
+section {
+	padding: 10px 10px 20px;
+	min-height: 100%;
+	margin-left: 250px;
+}
+
+h1, section > p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+section > p {
+  margin: 10px 0 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 400px));
+  grid-gap: 20px;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+#outdated {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#outdated > p {
+  text-align: center;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: tomato;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#outdated > p svg {
+  margin-left: 10px;
+}
+
+.outdated-wrapper {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.outdated-wrapper > p {
+  background-color: #ff9630b3;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-left: 8px solid #ff9630;
+  margin: 0 auto 30px;
+  width: 90%;
+}
+
+.closed {
+  height: 0;
+  overflow: hidden;
+}
+
+.open {
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  aside {
+    position: initial;
+    height: 150px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
   }
-  to {
-    transform: rotate(360deg);
+
+  aside img {
+    width: 100px;
+    height: 100px;
+  }
+
+  aside > div p:nth-child(1) {
+    font-size: 20px;
+  }
+  
+  aside > div p:nth-child(2) {
+    font-size: 12px;
+  }
+  
+  aside > div p:nth-child(3) {
+    font-size: 14px;
+  }
+  
+  aside a {
+    margin: 0 10px;
+  }
+
+  section {
+    margin-left: 0;
+  }
+
+  .projects {
+    grid-template-columns: repeat(auto-fill, minmax(auto, 300px));
+  }
+
+  .project {
+    width: 300px;
+    height: auto;
+    min-height: 130px;
   }
 }
